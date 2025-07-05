@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.2 on win32)" generated="2025-07-05T15:54:26.800644" rpa="false" schemaversion="5">
+<suite id="s1" name="Robot Task19" source="D:\Robot_Framework\Task_19\robot_task19.robot">
+<test id="s1-t1" name="User Login and Logout" line="16">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-07-05T15:54:27.286895" level="INFO">Opening browser 'chrome' to base url 'https://robotsparebinindustries.com/'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-07-05T15:54:27.286505" elapsed="2.451186"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-07-05T15:54:29.738761" elapsed="0.085356"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-05T15:54:29.837138" level="INFO">Typing text 'maria' into text field 'id:username'.</msg>
+<arg>${FIELDS[0]}</arg>
+<arg>${USERINFO.username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-05T15:54:29.835061" elapsed="0.461396"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-05T15:54:30.326854" level="INFO">Typing text 'thoushallnotpass' into text field 'id:password'.</msg>
+<arg>${FIELDS[1]}</arg>
+<arg>${USERINFO.password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-05T15:54:30.325044" elapsed="0.278188"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-07-05T15:54:30.604471" level="INFO">Clicking button 'xpath://button[contains(text(),'Log in')]'.</msg>
+<arg>${LOGIN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-05T15:54:30.604030" elapsed="0.164233"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-07-05T15:54:32.769797" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-07-05T15:54:30.768756" elapsed="2.001323"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-07-05T15:54:32.795048" level="INFO">Current page contains element 'id:firstname'.</msg>
+<arg>${ASSERT[0]}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-07-05T15:54:32.771039" elapsed="0.024593"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-07-05T15:54:32.820915" level="INFO">Current page contains element 'xpath://label[contains(text(),'Sales target ($)')]'.</msg>
+<arg>${ASSERT[1]}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-07-05T15:54:32.796574" elapsed="0.024605"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-07-05T15:54:32.822611" level="INFO">Clicking button 'id:logout'.</msg>
+<arg>${LOGOUT}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-05T15:54:32.821987" elapsed="0.163520"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-07-05T15:54:32.987129" elapsed="2.335344"/>
+</kw>
+<status status="PASS" start="2025-07-05T15:54:27.285033" elapsed="8.038407"/>
+</test>
+<status status="PASS" start="2025-07-05T15:54:26.802671" elapsed="8.522431"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Robot Task19" id="s1" pass="1" fail="0" skip="0">Robot Task19</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
